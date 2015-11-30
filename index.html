@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>On The Way</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+    <link rel="stylesheet" href="css/ratchet.css">
+    <link rel="stylesheet" href="css/app.css">
+	<script src="phonegap.js"></script>
+	<!--<script src="js/ratchet.js"></script>-->
+	<script src="js/app.js"></script>
+
+  </head>
+  <body onload="init();">
+
+  <header class="bar-title">
+    <h1 class="title">On The Way</h1>
+  </header>
+  <nav class="bar-standard bar-header-secondary">
+    <form>
+      <input type="search" placeholder="Search">
+    </form>
+  </nav>
+
+  <nav class="bar-tab">
+    <ul class="tab-inner">
+      <li class="tab-item">
+        <a href="plot.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Trip</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="favorites.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Favorites</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="settings.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Settings</div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content">
+
+    <div class="slider">
+      <ul>
+        <li>
+           <img src="img/otw.png">
+        </li>
+        <li>
+           <img src="img/skyfall.png">
+        </li>
+        <li>
+           <img src="img/ralph.png">
+        </li>
+      </ul>
+    </div>
+
+    <ul class="list">
+      <li class="list-divider">Options</li>
+      <li>
+        <a href="plot.html" data-transition="slide-in">
+          <strong>Plot your own trip</strong>
+         <!--  <p>Lorem ipsum dolor sit amet</p> -->
+          <span class="chevron"></span>
+        </a>
+      </li> 
+      <li>
+        <a href="trips.html" data-transition="slide-in">
+          <strong>View Recent Trips</strong>
+         <!--  <p>Lorem ipsum dolor sit amet</p> -->
+          <span class="chevron"></span>
+        </a>
+      </li>
+      <li>
+        <a href="recommend.html" data-transition="slide-in">
+          <strong>Get Recommendation</strong>
+         <!--  <p>Lorem ipsum dolor sit amet</p> -->
+          <span class="chevron"></span>
+        </a>
+      </li>
+      
+    </ul>
+
+  </div>
+  </body>
+</html>

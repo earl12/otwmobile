@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>On The Way</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+    <link rel="stylesheet" href="css/ratchet.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Pacifico' rel='stylesheet' type='text/css' />
+  	<script src="phonegap.js"></script>
+	<!--<script src="js/ratchet.js"></script>-->
+	   <script src="js/app.js"></script>
+    <script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+  </script>
+  <script type="text/javascript">
+  function initialize() {
+    var position = new google.maps.LatLng(10.2800, 123.9000);
+    var myOptions = {
+      zoom: 6,
+      center: position,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(
+        document.getElementById("map_canvas"),
+        myOptions);
+ 
+    var marker = new google.maps.Marker({
+        position: position,
+        
+        title:"This is the place."
+    });  
+    marker.setMap(map);
+ 
+    var contentString = 'FOOD<br> Name: Lantaw<br> Expense: 322php<br> Rating: ***<br> Review: Good Service';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+ 
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,this);
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(14.5800, 121.0000),
+        map: map,
+        title:"This is it."
+    });  
+    marker2.setMap(map);
+    var contentString = 'FOOD<br> Name: MCDO<br> Expense: 49php<br> Rating: **<br> Review: Very Fast Food';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    
+    google.maps.event.addListener(marker2, 'click', function() {
+      infowindow.open(map,marker2);
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(14.5700, 122.0000),
+        map: map,
+        title:"This is it."
+    });  
+    marker2.setMap(map);
+    var contentString = 'FOOD<br> Name: MCDO<br> Expense: 49php<br> Rating: **<br> Review: Very Fast Food';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    
+    google.maps.event.addListener(marker2, 'click', function() {
+      infowindow.open(map,marker2);
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(10.2700, 122.0000),
+        map: map,
+        title:"This is it."
+    });  
+    marker2.setMap(map);
+    var contentString = 'FOOD<br> Name: MCDO<br> Expense: 49php<br> Rating: **<br> Review: Very Fast Food';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    
+    google.maps.event.addListener(marker2, 'click', function() {
+      infowindow.open(map,marker2);
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(14.5900, 123.0000),
+        map: map,
+        title:"This is it."
+    });  
+    marker2.setMap(map);
+    var contentString = 'FOOD<br> Name: MCDO<br> Expense: 49php<br> Rating: **<br> Review: Very Fast Food';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    
+    google.maps.event.addListener(marker2, 'click', function() {
+      infowindow.open(map,marker2);
+    });
+
+
+
+     var flightPlanCoordinates = [
+    {lat: 14.5800, lng: 121.0000},
+    {lat: 10.2700, lng: 122.0000},
+    {lat: 10.2800, lng: 123.9000},
+    {lat: 14.5700, lng: 122.0000},
+    
+  ];
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(map);
+}
+ 
+  
+ 
+</script>
+
+  </head>
+  <body onload="init();">
+
+  <header class="bar-title">
+    <a class="button-prev" href="index.html" data-transition="slide-out">
+      Back
+    </a>
+    <h1 class="title">On The Way</h1>
+  </header>
+
+  <nav class="bar-tab">
+    <ul class="tab-inner">
+      <li class="tab-item active">
+        <a href="index.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Trip</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="favorites.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Favorites</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="settings.html" data-transition="fade">
+          <img class="tab-icon" src="img/icon-hamburger.png">
+          <div class="tab-label">Settings</div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+   <div class="content">
+    <div class="checkout-form content-padded">
+      <form>
+        <ul class="list">
+      <li class="list-divider">Plot your own trip</li>
+        <div class="input-group">
+          <div class="input-row">
+            <input type="text" placeholder="Input Destination">
+          </div>
+          
+        </div>
+            
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+    <!-- <ul class="list">
+      <li class="list-divider">Plot your own trip</li>
+      <div id="map_canvas" style="width:500px; height:500px">
+                </div> -->
+                
+             </body>
+      </html>

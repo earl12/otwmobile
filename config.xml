@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.digitalbackcountry"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>On The Way</name>
+
+    <description>
+		On The Way.
+    </description>
+
+    <author href="http://blog.digitalbackcountry.com" email="ryan@adobe.com">
+		
+    </author>
+			
+	
+</widget>
