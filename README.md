@@ -1,4 +1,4 @@
-phonegap-ratchet-demo
+On The Way
 =====================
 
 This is a demo that shows [Ratchet](https://github.com/maker/ratchet) working with (PhoneGap)[http://phonegap.com]. It's meant to be used with [PhoneGap Build](http://build.phonegap.com).
